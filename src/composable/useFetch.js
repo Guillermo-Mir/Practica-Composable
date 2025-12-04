@@ -10,7 +10,7 @@ export function useFetch(url) {
         loading.value = true
         error.value = null
         try {
-           const res = await fetch(url); 
+           const res = await fetch(url.value); 
             if (!res.ok) {
                 throw new Error('Error a la petició:' + res.status) //si no hi ha resposta positiva salta error
             }
