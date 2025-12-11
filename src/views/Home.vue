@@ -16,14 +16,7 @@ console.log(data.value);
   <div v-else-if = "error">{{error}}</div>
   <div v-else>
     <div v-if ="data && data.meals" class="meals-container">
-        <MealCard v-for="p in data.meals" :key="p.idMeal" :meal="p"
-                    :nom="p.strMeal"
-                    :area="p.strArea"
-                    :category="p.strCategory"
-                    :thumb="p.strMealThumb"
-                    :id="p.idMeal">
-                    
-        </MealCard>
+        <MealCard v-for="p in data.meals" :key="p.idMeal" :p="p"/>
     </div> 
   </div>
 

@@ -1,18 +1,22 @@
 <script setup>
+    /*              :nom="p.strMeal"
+                    :area="p.strArea"
+                    :category="p.strCategory"
+                    :thumb="p.strMealThumb"
+                    :id="p.idMeal"*/ 
 const props = defineProps({
-    nom: String,
-    area: String,
-    category: String,
-    thumb:String,
-    id:String
+    p: {
+        type: Object,
+        required:true
+    }
 })
 </script>
 
 <template>
 <div class="meal-item">
-    <img :src="thumb" :alt="nom">
-    <h3>{{ nom }}</h3>
-    <p>{{ area }} - {{ category }} </p>
-    <RouterLink :to="{name:'MealDetail', params:{idMeal:props.id}}">Recepta</RouterLink>
+    <img :src="props.p.strMealThumb" :alt="props.p.strMeal">
+    <h3>{{ props.p.strMeal }}</h3>
+    <p>{{ props.p.strArea }} - {{ props.p.strCategory }} </p>
+    <RouterLink :to="{name:'MealDetail', params:{idMeal:p.idMeal}}">Recepta</RouterLink>
 </div>
 </template>
