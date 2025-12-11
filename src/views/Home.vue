@@ -15,12 +15,13 @@ console.log(data.value);
   <div v-if = "loading">Carregant...</div>
   <div v-else-if = "error">{{error}}</div>
   <div v-else>
-    <div v-if ="data && data.meals">
-        <MealCard v-for="p in data.meals" :key="p.idMeal"
+    <div v-if ="data && data.meals" class="meals-container">
+        <MealCard v-for="p in data.meals" :key="p.idMeal" :meal="p"
                     :nom="p.strMeal"
                     :area="p.strArea"
                     :category="p.strCategory"
-                    :thumb="p.strMealThumb">
+                    :thumb="p.strMealThumb"
+                    :id="p.idMeal">
                     
         </MealCard>
     </div> 

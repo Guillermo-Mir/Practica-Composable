@@ -3,25 +3,16 @@ const props = defineProps({
     nom: String,
     area: String,
     category: String,
-    thumb:String
+    thumb:String,
+    id:String
 })
-
-
 </script>
 
 <template>
-<div>
-    <img :src="thumb" :alt="title">
+<div class="meal-item">
+    <img :src="thumb" :alt="nom">
     <h3>{{ nom }}</h3>
     <p>{{ area }} - {{ category }} </p>
-    <!--RouterLink :to="{name:'Meal', params:{idMeal:meal.idMeal}}"></RouterLink-->
+    <RouterLink :to="{name:'MealDetail', params:{idMeal:props.id}}">Recepta</RouterLink>
 </div>
-
 </template>
-
-<style scoped>
-    img{
-        width: 100px;
-        height: 100px;
-    }
-</style>

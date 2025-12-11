@@ -1,0 +1,58 @@
+.meals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.meal-item {
+    width: 220px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+}
+
+.meal-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.meal-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.meal-item h3 {
+    margin: 10px 0 4px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.meal-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.meal-item a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: #ff7a00;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.meal-item a:hover {
+    background-color: #e96b00;
+}

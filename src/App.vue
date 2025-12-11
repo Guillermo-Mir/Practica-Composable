@@ -5,7 +5,12 @@ import Home from './views/Home.vue';
 
 <template>
   <h1>ProductList</h1>
-  <Home></Home>
+  <div>
+    <RouterLink to="/">Home</RouterLink>
+    <Home></Home>
+    <hr />
+  </div>
+  
 </template>
 
 <style scoped></style>

@@ -7,8 +7,12 @@ const router = createRouter({
     {
       path:"/",
       name:"home",
-      component: App
-    }
+      component: ()=>import('@/views/Home.vue')
+    },
+    {
+      path:"/meal/:idMeal", name:"MealDetail", component:()=>import('@/component/MealCard.vue')
+    },
+
   ],
 })
 
